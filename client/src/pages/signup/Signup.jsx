@@ -2,8 +2,24 @@ import "./signup.scss"
 
 function Signup() {
   return (
-    <div>
-      
+    <div className="signup">
+      <div className="card">
+        <div className="left">
+          <span>Do you have an account?</span>
+          <button>Sign In</button>
+        </div>
+        <div className="right">
+          <h1>Logo</h1>
+          <p>Create new account.</p>
+          <form>
+            <input type="text" placeholder="Username" />
+            <input type="text" placeholder="Name" />
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Password" />
+            <button>Create</button>
+          </form>
+        </div>
+      </div>
     </div>
   )
 }
