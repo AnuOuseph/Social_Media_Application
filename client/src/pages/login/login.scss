@@ -1,0 +1,78 @@
+.login{
+    height: 100vh;
+    background: #f7fcff;
+    // background: linear-gradient(rgba(24, 149, 245, 0.173),rgba(63, 102, 200, 0.515));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+        .card{
+            width: 50%;
+            display: flex;
+            background-color: rgba(79, 167, 235, 0.179);
+            border-radius: 10px;
+            min-height: 600px;
+            .left{
+                flex: 1;
+                background: url("/images/login1.jpg"), 
+                center;
+                background-size: cover;
+                padding: 50px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: end;
+                gap: 20px;
+                span{
+                    color: white;
+                }
+                button{
+                    width: 50%;
+                    padding: 5px;
+                    border: none;
+                    background-color: white;
+                    color: rgb(79,168,235);
+                    font-size: 12px;
+                    font-weight: bold;
+                    cursor: pointer;
+                }
+            }
+            .right{
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 50px;
+                gap: 30px;
+                h1{
+                    color: #333;
+                }
+                p{ 
+                    color: #555;
+                }
+                form{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    input{
+                        background-color: rgb(255, 255, 255);
+                        padding: 10px;
+                        border-radius: 2px;
+                        border: none;
+                        outline: none;
+                        color: #777;
+                        font-size: 10px;
+                    }
+                    button{
+                        background-color: rgb(79,168,235);
+                        color: white;
+                        font-size: 12px;
+                        font-weight: bold;
+                        border: none;
+                        padding: 10px;
+                        margin-top: 5px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+}
