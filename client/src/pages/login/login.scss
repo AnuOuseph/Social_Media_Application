@@ -1,6 +1,6 @@
 .login{
     height: 100vh;
-    background: #f7fcff;
+    background: #ffffff;
     // background: linear-gradient(rgba(24, 149, 245, 0.173),rgba(63, 102, 200, 0.515));
     display: flex;
     align-items: center;
@@ -8,7 +8,7 @@
         .card{
             width: 50%;
             display: flex;
-            background-color: rgba(79, 167, 235, 0.179);
+            //background-color: rgba(79, 167, 235, 0.179);
             border-radius: 10px;
             min-height: 600px;
             .left{
@@ -26,8 +26,10 @@
                     color: white;
                 }
                 button{
-                    width: 50%;
+                    width: 100%;
                     padding: 5px;
+                    padding-left: 30px;
+                    padding-right: 30px;
                     border: none;
                     background-color: white;
                     color: rgb(79,168,235);
@@ -43,10 +45,13 @@
                 justify-content: center;
                 padding: 50px;
                 gap: 30px;
+                border: 1px #000 solid;
                 h1{
+                    text-align: center;
                     color: #333;
                 }
                 p{ 
+                    text-align: center;
                     color: #555;
                 }
                 form{
@@ -54,12 +59,12 @@
                     flex-direction: column;
                     gap: 10px;
                     input{
-                        background-color: rgb(255, 255, 255);
+                        background-color: #e7e3e3;
                         padding: 10px;
                         border-radius: 2px;
                         border: none;
                         outline: none;
-                        color: #777;
+                        color: #222;
                         font-size: 10px;
                     }
                     button{
