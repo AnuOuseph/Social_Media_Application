@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import './app.css'
+import './app.scss'
 import {createBrowserRouter, Navigate, Outlet, RouterProvider} from 'react-router-dom'
 import Login from './pages/login/Login'
 import Signup from './pages/signup/Signup'
@@ -8,14 +8,18 @@ import Profile from './pages/profile/Profile'
 import NavBar from './components/navBar/NavBar'
 import LeftBar from './components/leftBar/LeftBar'
 import RightBar from './components/rightBar/RightBar'
+import { useContext } from 'react'
+import { DarkModeContext } from './context/DarkModeContext'
 
 function App() {
 
-  const currentUser = true
+  const currentUser = true;
+  const {darkMode} = useContext(DarkModeContext)
+  console.log(darkMode)
 
   const Layout = ()=>{
     return(
-      <div>
+      <div className={`theme-${darkMode ? "dark" : "light"}`}>
         <NavBar/>
         <div style={{display:'flex'}}>
           <LeftBar/>
