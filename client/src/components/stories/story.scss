@@ -1,7 +1,7 @@
 .stories{
     display: flex;
     gap: 10px;
-    height: 250px;
+    height: 200px;
     margin-bottom: 30px;
     .story{
         flex: 1;
@@ -22,7 +22,7 @@
         }
         button{
             position: absolute;
-            bottom: 40px;
+            bottom: 30px;
             left: 10px;
             color: white;
             background-color: #5271ff;

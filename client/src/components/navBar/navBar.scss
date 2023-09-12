@@ -12,6 +12,7 @@
         background-color: themed("bg");
         color: themed("text-color");
         top: 0;
+        z-index: 999;
         .left{
             display: flex;
             align-items: center;
