@@ -2,6 +2,7 @@ import { Link } from "react-router-dom"
 import "./login.scss"
 import { useContext } from "react"
 import { AuthContext } from "../../context/AuthContext"
+import GoogleIcon from '@mui/icons-material/Google';
 
 function Login() {
   const {login} = useContext(AuthContext)
@@ -18,13 +19,15 @@ function Login() {
           </Link>
         </div>
         <div className="right">
-          <h1>Logo</h1>
+          <h1>Ixia</h1>
           <p>Sign in to your account.</p>
           <form>
             <input type="text" placeholder="Username" />
             <input type="password" placeholder="Password" />
-            <button onClick={handleLogin()}>Sign In</button>
+            <button onClick={handleLogin()}>Login</button>
           </form>
+          <p>or</p>
+          <button><GoogleIcon style={{paddingRight:"5px", fontSize:"small"}}/> Sign in with Google</button>
         </div>
       </div>
     </div>

@@ -13,7 +13,7 @@
             min-height: 600px;
             .left{
                 flex: 1;
-                background: url("/images/login1.jpg"), 
+                background: url("https://images.pexels.com/photos/1019771/pexels-photo-1019771.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"), 
                 center;
                 background-size: cover;
                 padding: 50px;
@@ -31,8 +31,9 @@
                     padding-left: 30px;
                     padding-right: 30px;
                     border: none;
+                    border-radius: 10px;
                     background-color: white;
-                    color: rgb(79,168,235);
+                    color: rgb(1,110,141);
                     font-size: 12px;
                     font-weight: bold;
                     cursor: pointer;
@@ -45,7 +46,7 @@
                 justify-content: center;
                 padding: 50px;
                 gap: 30px;
-                border: 1px #000 solid;
+                border: 1px lightgray solid;
                 h1{
                     text-align: center;
                     color: #333;
@@ -59,24 +60,37 @@
                     flex-direction: column;
                     gap: 10px;
                     input{
-                        background-color: #e7e3e3;
-                        padding: 10px;
-                        border-radius: 2px;
-                        border: none;
+                        background: transparent;
+                        padding: 10px 20px;
+                        border-radius: 20px;
+                        border: 1px solid lightgray;
                         outline: none;
                         color: #222;
                         font-size: 10px;
                     }
                     button{
-                        background-color: rgb(79,168,235);
+                        background-color: rgb(1,110,141);
                         color: white;
                         font-size: 12px;
                         font-weight: bold;
                         border: none;
+                        border-radius: 20px;
                         padding: 10px;
                         margin-top: 5px;
                         cursor: pointer;
                     }
+                }
+                button{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: transparent;
+                    padding: 10px;
+                    border-radius: 20px;
+                    border: 1px solid lightgray;
+                    outline: none;
+                    color: rgb(1,110,141);
+                    font-size: 12px;
                 }
             }
         }

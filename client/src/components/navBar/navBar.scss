@@ -35,6 +35,12 @@
                     background: transparent;
                     color: themed("text-color");
                     outline: none;
+                    @include mobile{
+                        display: none;
+                    }
+                    @include tablet{
+                        width: 200px;
+                    }
                 }
             }
         }
@@ -53,6 +59,9 @@
                     border-radius: 50%;
                     object-fit: cover;
                 }
+            }
+            @include mobile{
+                display: none;
             }
         }
     }

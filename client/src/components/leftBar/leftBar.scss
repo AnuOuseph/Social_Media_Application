@@ -8,6 +8,9 @@
         height: calc(100vh - 70px);
         background-color: themed("bg");
         color: themed("text-color");
+        @include mobile{
+            display: none;
+        }
         .container{
             padding: 20px;
             hr{

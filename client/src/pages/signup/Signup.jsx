@@ -6,14 +6,14 @@ function Signup() {
     <div className="signup">
       <div className="card">
         <div className="left">
-          <span>Do you have an account?</span>
+          <span>Not a user?</span>
           <Link to="/login">
             <button>Sign In</button>
           </Link>
         </div>
         <div className="right">
-          <h1>Logo</h1>
-          <p>Create new account.</p>
+          <h1>Ixia</h1>
+          <p>Create a new account.</p>
           <form>
             <input type="text" placeholder="Username" />
             <input type="text" placeholder="Name" />
