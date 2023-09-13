@@ -11,6 +11,7 @@ import RightBar from './components/rightBar/RightBar'
 import { useContext } from 'react'
 import { DarkModeContext } from './context/DarkModeContext'
 import { AuthContext } from './context/AuthContext'
+import Explore from './pages/explore/Explore'
 
 function App() {
 
@@ -27,6 +28,20 @@ function App() {
             <Outlet/>
           </div>
           <RightBar/>
+        </div>
+      </div>
+    )
+  }
+
+  const Layout2 = ()=>{
+    return(
+      <div className={`theme-${darkMode ? "dark" : "light"}`}>
+        <NavBar/>
+        <div style={{display:'flex'}}>
+          <LeftBar/>
+          <div style={{flex:9}}>
+            <Outlet/>
+          </div>
         </div>
       </div>
     )
@@ -54,6 +69,18 @@ function App() {
           path: "/profile/:id",
           element: <Profile/>
         }
+      ]
+    },
+    {
+      path: "/",
+      element: <ProtectedRouter>
+                <Layout2/>
+                </ProtectedRouter>,
+      children: [
+        {
+          path: "/explore",
+          element: <Explore/>
+        },
       ]
     },
     {

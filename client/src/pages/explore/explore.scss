@@ -1,0 +1,50 @@
+@import '../../app.scss';
+
+.explore{
+    @include themify($themes){
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 20px;
+        overflow-x: hidden;
+        background-color: themed("bgSoft");
+        .item{
+            position: relative;
+            img{
+                width: 280px;
+                height: 280px;
+                object-fit: cover;
+            }
+            .layer{
+                position: absolute;
+                width: 280px;
+                height: 280px;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                p{
+                    color: white;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;height: 200;
+                    opacity: 1;
+                    transition-delay: 0.8s;
+                    transition-duration: 0.8s;
+                }
+            }
+            .layer:hover{
+                opacity: 1;
+                background-color: rgb(0,0,0,0.6);
+                p{
+                    opacity: 1;
+                }
+            }
+        }
+        
+    }
+}

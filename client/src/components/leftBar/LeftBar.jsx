@@ -77,14 +77,6 @@ function LeftBar() {
             <img src={Gallery} alt="" />
             <span>Gallery</span>
           </div>
-          <div className="item">
-            <img src={Videos} alt="" />
-            <span>Videos</span>
-          </div>
-          <div className="item">
-            <img src={Messages} alt="" />
-            <span>Messages</span>
-          </div>
         </div>
       </div>
     </div>
