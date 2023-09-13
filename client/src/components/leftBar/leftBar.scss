@@ -12,7 +12,7 @@
             display: none;
         }
         .container{
-            padding: 20px;
+            padding: 30px;
             hr{
                 margin: 20px 0px;
                 border: none;
@@ -24,7 +24,7 @@
                 flex-direction: column;
                 gap: 20px;
                 span{
-                    font-size: 12px;
+                    font-size: 14px;
                 }
                 .user{
                     display: flex;
@@ -37,7 +37,8 @@
                         object-fit: cover;
                     }
                     span{
-                        font-size: 14px;
+                        font-size: 16px;
+                        color: themed("text-color");
                     }
                 }
                 .item{
@@ -48,9 +49,18 @@
                         width: 30px;
                     }
                     span{
-                        font-size: 14px;
+                        font-size: 16px;
+                        color: themed("text-color");
                         cursor: pointer;
                     }
+                }
+            }
+            .menubar{
+                display: flex;
+                align-items: center;
+                margin-top: 80px;
+                span{
+                    padding: 0px 10px;
                 }
             }
         }

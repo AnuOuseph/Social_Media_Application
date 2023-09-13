@@ -1,0 +1,82 @@
+.popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    z-index: 1000;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    .popup-inner{
+        display: flex;
+        flex-direction: column;
+        h2{
+            padding: 10px;
+            margin-bottom: 5px;
+        }
+        .content{
+            height: 300px;
+            overflow: scroll;
+            &::-webkit-scrollbar{
+                display: none;
+            }
+            .date{
+                padding: 10px 10px;
+                font-size: 16px;
+                font-weight: bold;
+            }
+            hr{
+                margin: 15px 10px;
+            }
+            .user{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: 30px 0px;
+                .userInfo{
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    position: relative;
+                    img{
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        object-fit: cover;
+                    }
+                    p{
+                        color: themed("textColorSoft");
+                        font-size: 14px;
+                        span{
+                            font-weight: 500;
+                            font-size: 14px;
+                            color: themed("text-color");
+                            padding: 0px 5px;
+                        }
+                    }
+                }
+            }
+        }
+        button{
+            background: transparent;
+            width: 20px;
+            align-self: flex-end;
+            border: none;
+            color: black;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    }
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 1000;
+}

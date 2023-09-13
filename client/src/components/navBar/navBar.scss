@@ -17,6 +17,11 @@
             display: flex;
             align-items: center;
             gap: 30px;
+            .link{
+                color: themed("text-color");
+                display: flex;
+                align-items: center;
+            }
             span{
                 font-weight: bold;
                 font-size: 20px;
@@ -48,6 +53,11 @@
             display: flex;
             align-items: center;
             gap: 20px;
+            .link{
+                color: themed("text-color");
+                display: flex;
+                align-items: center;
+            }
             .user{
                 display: flex;
                 align-items: center;

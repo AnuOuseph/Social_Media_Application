@@ -22,18 +22,26 @@ function NavBar() {
         <Link to='/' style={{textDecoration: "none"}}>
           <span>Ixia</span>
         </Link>
-        <HomeOutlinedIcon style={{width:"22px"}}/>
+        <Link to='/' className="link" style={{textDecoration:"none"}}>
+          <HomeOutlinedIcon style={{width:"22px"}}/>
+        </Link>
         {darkMode?<WbSunnyOutlinedIcon style={{width:"22px"}} onClick={toggle}/>:<DarkModeOutlinedIcon style={{width:"22px"}} onClick={toggle}/>}
-        <GridViewOutlinedIcon style={{width:"22px"}}/>
+        <Link to='/explore' className="link" style={{textDecoration: "none"}}>
+          <GridViewOutlinedIcon style={{width:"22px"}}/>
+        </Link>
         <div className="search">
           <SearchOutlinedIcon style={{width:"22px"}}/>
           <input type="text" placeholder="Search.." />
         </div>
       </div>
       <div className="right">
-        <PersonOutlineOutlinedIcon style={{width:"22px"}}/>
+        <Link to='/profile/2897' className="link" style={{textDecoration: "none"}}>
+          <PersonOutlineOutlinedIcon style={{width:"22px"}}/>
+        </Link>
         <NotificationsNoneOutlinedIcon style={{width:"22px"}}/>
-        <EmailOutlinedIcon style={{width:"22px"}}/>
+        <Link to='/explore' className="link" style={{textDecoration: "none"}}>
+          <EmailOutlinedIcon style={{width:"22px"}}/>
+        </Link>
         <div className="user">
           <img src={currentUser.profilePic} alt="" />
           <span>{currentUser.name}</span>

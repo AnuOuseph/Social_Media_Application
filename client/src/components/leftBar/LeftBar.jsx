@@ -1,25 +1,35 @@
 import "./leftBar.scss"
-import Friends from "../../assets/friend.png"
-import Groups from "../../assets/2.png"
-import Gallery from "../../assets/8.png"
-import Videos from "../../assets/9.png"
-import Messages from "../../assets/10.png"
 import { useContext, useState } from "react"
 import { AuthContext } from "../../context/AuthContext"
 import Create from "../create/Create"
+import Notification from "../notifications/Notification"
 import Followers from "../../components/followers/followers"
 import Following from "../following/Following"
+import { Link } from "react-router-dom"
+import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
+import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
+import BookmarkBorderOutlinedIcon from '@mui/icons-material/BookmarkBorderOutlined';
+import PeopleAltOutlinedIcon from '@mui/icons-material/PeopleAltOutlined';
+import ExploreOutlinedIcon from '@mui/icons-material/ExploreOutlined';
+import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
+import NotificationsActiveOutlinedIcon from '@mui/icons-material/NotificationsActiveOutlined';
+import AddCircleOutlineOutlinedIcon from '@mui/icons-material/AddCircleOutlineOutlined';
+import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 
 function LeftBar() {
   const [seen, setSeen] = useState(false)
   const [open, setOpen] = useState(false)
   const [followOpen, setFollowOpen] = useState(false)
+  const [notification, setNotification] = useState(false)
 
     function FollowersOpen () {
       setOpen(!open)
     }
     function FollowingOpen () {
       setFollowOpen(!followOpen)
+    }
+    function NotificationOpen () {
+      setNotification(!notification)
     }
 
     function togglePop () {
@@ -32,32 +42,37 @@ function LeftBar() {
         <div className="menu">
           <div className="user">
             <img src={currentUser.profilePic} alt="" />
-            <span>Profile</span>
+            <Link to="/profile/2987" style={{textDecoration:"none"}}>
+              <span>Profile</span>
+            </Link>
           </div>
           <div className="item">
-            <img src={Friends} alt="" />
+            <PeopleAltOutlinedIcon/>
             <span onClick={FollowersOpen}>Followers</span>
             {open ? <Followers followersOpen={FollowersOpen} /> : null}
           </div>
           <div className="item">
-            <img src={Friends} alt="" />
+            <PeopleAltOutlinedIcon/>
             <span onClick={FollowingOpen}>Following</span>
             {followOpen ? <Following followingOpen={FollowingOpen} /> : null}
           </div>
           <div className="item">
-            <img src={Groups} alt="" />
-            <span>Explore</span>
+            <ExploreOutlinedIcon/>
+            <Link to='/explore' style={{textDecoration: "none"}}>
+              <span>Explore</span>
+            </Link>
           </div>
           <div className="item">
-            <img src={Gallery} alt="" />
+            <EmailOutlinedIcon/>
             <span>Messages</span>
           </div>
           <div className="item">
-            <img src={Videos} alt="" />
-            <span>Notifications</span>
+            <NotificationsActiveOutlinedIcon/>
+            <span onClick={NotificationOpen}>Notifications</span>
+            {notification ? <Notification notification={NotificationOpen} /> : null}
           </div>
           <div className="item">
-            <img src={Messages} alt="" />
+            <AddCircleOutlineOutlinedIcon/>
             <span onClick={togglePop}>Create</span>
             {seen ? <Create toggle={togglePop} /> : null}
           </div>
@@ -66,17 +81,21 @@ function LeftBar() {
         <div className="menu">
           <span>Shortcuts</span>
           <div className="item">
-            <img src={Friends} alt="" />
-            <span>Friends</span>
+            <BookmarkBorderOutlinedIcon/>
+            <span>Saved</span>
           </div>
           <div className="item">
-            <img src={Groups} alt="" />
-            <span>Groups</span>
+            <SettingsOutlinedIcon/>
+            <span>Settings</span>
           </div>
           <div className="item">
-            <img src={Gallery} alt="" />
-            <span>Gallery</span>
+            <LogoutOutlinedIcon/>
+            <span>Logout</span>
           </div>
+        </div>
+        <div className="menubar">
+          <MenuOutlinedIcon/>
+          <span>More</span>
         </div>
       </div>
     </div>
