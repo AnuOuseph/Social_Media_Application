@@ -20,7 +20,7 @@ function NavBar() {
     <div className="navBar">
       <div className="left">
         <Link to='/' style={{textDecoration: "none"}}>
-          <span>Logo</span>
+          <span>Ixia</span>
         </Link>
         <HomeOutlinedIcon style={{width:"22px"}}/>
         {darkMode?<WbSunnyOutlinedIcon style={{width:"22px"}} onClick={toggle}/>:<DarkModeOutlinedIcon style={{width:"22px"}} onClick={toggle}/>}

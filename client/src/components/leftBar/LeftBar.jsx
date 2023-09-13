@@ -4,10 +4,27 @@ import Groups from "../../assets/2.png"
 import Gallery from "../../assets/8.png"
 import Videos from "../../assets/9.png"
 import Messages from "../../assets/10.png"
-import { useContext } from "react"
+import { useContext, useState } from "react"
 import { AuthContext } from "../../context/AuthContext"
+import Create from "../create/Create"
+import Followers from "../../components/followers/followers"
+import Following from "../following/Following"
 
 function LeftBar() {
+  const [seen, setSeen] = useState(false)
+  const [open, setOpen] = useState(false)
+  const [followOpen, setFollowOpen] = useState(false)
+
+    function FollowersOpen () {
+      setOpen(!open)
+    }
+    function FollowingOpen () {
+      setFollowOpen(!followOpen)
+    }
+
+    function togglePop () {
+        setSeen(!seen);
+    }
   const {currentUser} = useContext(AuthContext)
   return (
     <div className="leftBar">
@@ -15,27 +32,34 @@ function LeftBar() {
         <div className="menu">
           <div className="user">
             <img src={currentUser.profilePic} alt="" />
-            <span>{currentUser.name}</span>
+            <span>Profile</span>
           </div>
           <div className="item">
             <img src={Friends} alt="" />
-            <span>Friends</span>
+            <span onClick={FollowersOpen}>Followers</span>
+            {open ? <Followers followersOpen={FollowersOpen} /> : null}
+          </div>
+          <div className="item">
+            <img src={Friends} alt="" />
+            <span onClick={FollowingOpen}>Following</span>
+            {followOpen ? <Following followingOpen={FollowingOpen} /> : null}
           </div>
           <div className="item">
             <img src={Groups} alt="" />
-            <span>Groups</span>
+            <span>Explore</span>
           </div>
           <div className="item">
             <img src={Gallery} alt="" />
-            <span>Gallery</span>
+            <span>Messages</span>
           </div>
           <div className="item">
             <img src={Videos} alt="" />
-            <span>Videos</span>
+            <span>Notifications</span>
           </div>
           <div className="item">
             <img src={Messages} alt="" />
-            <span>Messages</span>
+            <span onClick={togglePop}>Create</span>
+            {seen ? <Create toggle={togglePop} /> : null}
           </div>
         </div>
         <hr />

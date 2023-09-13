@@ -1,0 +1,60 @@
+.popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    z-index: 1000;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    .popup-inner{
+        display: flex;
+        flex-direction: column;
+        h2{
+            padding: 10px;
+        }
+        form{
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            label {
+                display: block;
+                margin-bottom: 10px;
+            }
+            input {
+                width: 100%;
+                padding: 5px;
+                border-radius: 5px;
+                border: 1px solid #777;
+                margin: 10px 0px;
+            }
+            button{
+                width: 50%;
+                border: none;
+                padding: 5px 10px;
+                border-radius: 10px;
+                background-color: rgb(1,110,141);
+                color: white;
+                align-self: flex-start;
+            }
+        }
+        button{
+            width: 20px;
+            align-self: flex-end;
+            background-color: #333;
+            color: white;
+        }
+    }
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 1000;
+}
