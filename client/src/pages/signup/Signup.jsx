@@ -19,7 +19,7 @@ function Signup() {
             <input type="text" placeholder="Name" />
             <input type="email" placeholder="Email" />
             <input type="password" placeholder="Password" />
-            <Link to='/' style={{textDecoration:"none",color:"white"}}>Login</Link>
+            <Link to='/login' style={{textDecoration:"none",color:"white"}}>Create</Link>
           </form>
         </div>
       </div>
