@@ -10,6 +10,14 @@
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    @media(max-width:480px){
+        height: auto;
+        width: 300px;
+    }
+    @media(max-width:960px){
+        height: auto;
+        width: 600px;
+    }
     .popup-inner1{
         display: flex;
         flex-direction: column;
@@ -18,12 +26,24 @@
             display: flex;
             overflow: hidden;
             height: 500px;
+            @media(max-width:480px){
+                display: flex;
+                flex-direction: column;
+            }
             .leftView{
                 flex: 1;
                 img{
                     width: 400px;
                     height: 500px;
                     object-fit: cover;
+                    @media(max-width:480px){
+                        width: 200px;
+                        height: 200px;
+                    }
+                    @media(max-width:960px){
+                        height: 400px;
+                        width: 300px;
+                    }
                 }
             }
             .rightView1{
@@ -65,6 +85,13 @@
                     &::-webkit-scrollbar{
                         display: none;
                     }
+                    @media(max-width:480px){
+                        width: 240px;
+                        height: 280px;
+                    }
+                    @media(max-width:960px){
+                        height: 300px;
+                    }
                     .user1{
                         display: flex;
                         align-items: center;
@@ -83,6 +110,12 @@
                                 display: flex;
                                 flex-direction: column;
                                 width: 280px;
+                                @media(max-width:480px){
+                                    width: 160px;  
+                                }
+                                @media(max-width:960px){
+                                    width: 160px;
+                                }
                                 .name1{
                                     font-weight: 500;
                                 }

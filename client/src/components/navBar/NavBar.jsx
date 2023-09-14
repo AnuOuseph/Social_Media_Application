@@ -38,8 +38,7 @@ function NavBar() {
         <Link to='/profile/2' className="link" style={{textDecoration: "none"}}>
           <PersonOutlineOutlinedIcon style={{width:"22px"}}/>
         </Link>
-        <NotificationsNoneOutlinedIcon style={{width:"22px"}}/>
-        <Link to='/explore' className="link" style={{textDecoration: "none"}}>
+        <Link to='/message' className="link" style={{textDecoration: "none"}}>
           <EmailOutlinedIcon style={{width:"22px"}}/>
         </Link>
         <div className="user">

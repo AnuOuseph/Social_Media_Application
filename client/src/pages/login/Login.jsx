@@ -24,7 +24,7 @@ function Login() {
           <form>
             <input type="text" placeholder="Username" />
             <input type="password" placeholder="Password" />
-            <button onClick={handleLogin()}>Login</button>
+            <button onClick={handleLogin()}><Link to='/' style={{textDecoration:"none",color:"white"}}>Login</Link></button>
           </form>
           <p>or</p>
           <button><GoogleIcon style={{paddingRight:"5px", fontSize:"small"}}/> Sign in with Google</button>

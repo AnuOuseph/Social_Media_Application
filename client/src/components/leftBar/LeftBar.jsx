@@ -64,7 +64,9 @@ function LeftBar() {
           </div>
           <div className="item">
             <EmailOutlinedIcon/>
-            <span>Messages</span>
+            <Link to='/message' style={{textDecoration: "none"}}>
+              <span>Messages</span>
+            </Link>
           </div>
           <div className="item">
             <NotificationsActiveOutlinedIcon/>
