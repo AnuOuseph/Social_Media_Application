@@ -42,7 +42,7 @@ function LeftBar() {
         <div className="menu">
           <div className="user">
             <img src={currentUser.profilePic} alt="" />
-            <Link to="/profile/2987" style={{textDecoration:"none"}}>
+            <Link to="/profile/2" style={{textDecoration:"none"}}>
               <span>Profile</span>
             </Link>
           </div>

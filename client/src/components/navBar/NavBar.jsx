@@ -25,7 +25,7 @@ function NavBar() {
         <Link to='/' className="link" style={{textDecoration:"none"}}>
           <HomeOutlinedIcon style={{width:"22px"}}/>
         </Link>
-        {darkMode?<WbSunnyOutlinedIcon style={{width:"22px"}} onClick={toggle}/>:<DarkModeOutlinedIcon style={{width:"22px"}} onClick={toggle}/>}
+        {darkMode?<WbSunnyOutlinedIcon style={{width:"22px",cursor:"pointer"}} onClick={toggle}/>:<DarkModeOutlinedIcon style={{width:"22px",cursor:"pointer"}} onClick={toggle}/>}
         <Link to='/explore' className="link" style={{textDecoration: "none"}}>
           <GridViewOutlinedIcon style={{width:"22px"}}/>
         </Link>
@@ -35,7 +35,7 @@ function NavBar() {
         </div>
       </div>
       <div className="right">
-        <Link to='/profile/2897' className="link" style={{textDecoration: "none"}}>
+        <Link to='/profile/2' className="link" style={{textDecoration: "none"}}>
           <PersonOutlineOutlinedIcon style={{width:"22px"}}/>
         </Link>
         <NotificationsNoneOutlinedIcon style={{width:"22px"}}/>

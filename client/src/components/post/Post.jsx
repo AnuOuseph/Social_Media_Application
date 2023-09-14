@@ -36,7 +36,7 @@ function Post({post}) {
         </div>
         <div className="interaction">
             <div className="item">
-                {liked?<FavoriteOutlinedIcon/>:<FavoriteBorderOutlinedIcon/>}
+                {liked?<FavoriteOutlinedIcon style={{color:"red"}}/>:<FavoriteBorderOutlinedIcon style={{color:"red"}}/>}
                 12 Likes
             </div>
             <div className="item" onClick={()=>setOpenComment(!openComment)}>

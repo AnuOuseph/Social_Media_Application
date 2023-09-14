@@ -1,8 +1,15 @@
+import { useState } from "react";
 import "./explore.scss"
 import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
+import PostView from "../../components/postview/PostView";
 
 
 function Explore() {
+    // const [view, setView] = useState(false);
+    // function ViewPost(){
+    //     setView(!view)
+    // }
+    
     const items = [
         {
             id:1,
@@ -65,16 +72,31 @@ function Explore() {
             img:"https://plus.unsplash.com/premium_photo-1686593546987-6c190f16927c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDh8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
         }
     ]
+
+    const [viewStates, setViewStates] = useState(
+        items.map(() => ({ visible: false }))
+      );
+    
+      function toggleView(index) {
+        const newViewStates = [...viewStates];
+        newViewStates[index].visible = !newViewStates[index].visible;
+        setViewStates(newViewStates);
+      }
+
+
   return (
     <div className="explore">
-      {items.map((item)=>(
+      {items.map((item,index)=>(
         <>
         <div className="item" key={item.id}>
-        <img src={item.img} alt="" />
-        <div className="layer">
-            <p><FavoriteOutlinedIcon/> {item.likes}</p>
-        </div>
-        </div>
+            <img src={item.img} alt="" />
+            <div className="layer" onClick={() => toggleView(index)}>
+                <p><FavoriteOutlinedIcon/> {item.likes}</p>
+            </div>
+            {viewStates[index].visible ? (
+            <PostView viewPost={() => toggleView(index)} img={item.img} />
+          ) : null}        
+          </div>
         </>
       ))}
     </div>

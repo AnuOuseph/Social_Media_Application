@@ -1,0 +1,152 @@
+.popup1{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 500px;
+    width: 800px;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    z-index: 1000;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    .popup-inner1{
+        display: flex;
+        flex-direction: column;
+        height: 500px;
+        .content1{
+            display: flex;
+            overflow: hidden;
+            height: 500px;
+            .leftView{
+                flex: 1;
+                img{
+                    width: 400px;
+                    height: 500px;
+                    object-fit: cover;
+                }
+            }
+            .rightView1{
+                flex: 1;
+                .user{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 10px;
+                    .userInfo{
+                        display: flex;
+                        gap: 20px;
+                        img{
+                            width: 30px;
+                            height: 30px;
+                            border-radius: 50%;
+                            object-fit: cover;
+                        }
+                        .details{
+                            display: flex;
+                            flex-direction: column;
+                            .name{
+                                font-weight: 500;
+                            }
+                            .time{
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+                hr{
+                    margin: 0px 10px;
+                }
+                .comment{
+                    background-color: white;
+                    height: 280px;
+                    padding: 16px;
+                    overflow-y: scroll;
+                    &::-webkit-scrollbar{
+                        display: none;
+                    }
+                    .user1{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 8px 0px;
+                        .userInfo1{
+                            display: flex;
+                            gap: 20px;
+                            img{
+                                width: 30px;
+                                height: 30px;
+                                border-radius: 50%;
+                                object-fit: cover;
+                            }
+                            .details1{
+                                display: flex;
+                                flex-direction: column;
+                                width: 280px;
+                                .name1{
+                                    font-weight: 500;
+                                }
+                                .time{
+                                    font-size: 12px;
+                                }
+                            }
+                            .icon1{
+                                align-self: flex-end;
+                            }
+                        }
+                    }
+                }
+                .bottom{
+                    padding: 20px 10px;
+                    .top{
+                        display: flex;
+                        justify-content: space-between;
+                        .top-left{
+                            display: flex;
+                            gap: 10px;
+                        }
+                    }
+                    .text1{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 5px;
+                        margin-top: 15px;
+                        border: 1px solid lightgray;
+                        border-radius: 20px;
+                        input{
+                            border: none;
+                            outline: none;
+                            padding: 5px 20px;
+                        }
+                        .send{
+                            width: 30px;
+                            height: 30px;
+                            border-radius: 50%;
+                            background-color: rgb(1,110,141);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                    }
+                }
+            }
+        }
+        button{
+            width: 20px;
+            align-self: flex-end;
+            background-color: #333;
+            color: white;
+        }
+    }
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.1);
+    z-index: 1000;
+}
