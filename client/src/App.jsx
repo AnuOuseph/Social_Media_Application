@@ -12,6 +12,7 @@ import { useContext } from 'react'
 import { DarkModeContext } from './context/DarkModeContext'
 import { AuthContext } from './context/AuthContext'
 import Explore from './pages/explore/Explore'
+import Message from './pages/message/Message'
 
 function App() {
 
@@ -81,6 +82,10 @@ function App() {
           path: "/explore",
           element: <Explore/>
         },
+        {
+          path: "/message",
+          element: <Message/>
+        }
       ]
     },
     {
