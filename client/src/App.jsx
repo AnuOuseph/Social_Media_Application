@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import './app.scss'
-import {createBrowserRouter, Navigate, Outlet, RouterProvider} from 'react-router-dom'
+import {createBrowserRouter, Outlet, RouterProvider} from 'react-router-dom'
 import Login from './pages/login/Login'
 import Signup from './pages/signup/Signup'
 import Home from './pages/home/Home'
@@ -10,13 +10,11 @@ import LeftBar from './components/leftBar/LeftBar'
 import RightBar from './components/rightBar/RightBar'
 import { useContext } from 'react'
 import { DarkModeContext } from './context/DarkModeContext'
-import { AuthContext } from './context/AuthContext'
 import Explore from './pages/explore/Explore'
 import Message from './pages/message/Message'
 
 function App() {
 
-  const {currentUser} = useContext(AuthContext);
   const {darkMode} = useContext(DarkModeContext)
 
   const Layout = ()=>{
@@ -48,19 +46,10 @@ function App() {
     )
   }
 
-  const ProtectedRouter = ({children}) => {
-    if(!currentUser){
-      return <Navigate to="/login"/>
-    }
-    return children
-  }
-
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <ProtectedRouter>
-                <Layout/>
-                </ProtectedRouter>,
+      element: <Layout/>,
       children: [
         {
           path: "/",
@@ -74,9 +63,7 @@ function App() {
     },
     {
       path: "/",
-      element: <ProtectedRouter>
-                <Layout2/>
-                </ProtectedRouter>,
+      element: <Layout2/>,
       children: [
         {
           path: "/explore",

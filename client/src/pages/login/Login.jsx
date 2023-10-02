@@ -1,22 +1,12 @@
 import { Link } from "react-router-dom"
 import "./login.scss"
-import { useContext } from "react"
-import { AuthContext } from "../../context/AuthContext"
 import GoogleIcon from '@mui/icons-material/Google';
 
 function Login() {
-  const {login} = useContext(AuthContext)
-  const handleLogin = () =>{
-    login()
-  }
   return (
     <div className="login">
       <div className="card">
         <div className="left">
-          <span>Create an Account?</span>
-          <Link to="/register">
-            <button>Register</button>
-          </Link>
         </div>
         <div className="right">
           <h1>Ixia</h1>
@@ -24,10 +14,11 @@ function Login() {
           <form>
             <input type="text" placeholder="Username" />
             <input type="password" placeholder="Password" />
-            <button onClick={handleLogin()}><Link to='/' style={{textDecoration:"none",color:"white"}}>Login</Link></button>
+            <button><Link to='/' style={{textDecoration:"none",color:"white"}}>Login</Link></button>
           </form>
           <p>or</p>
-          <button><GoogleIcon style={{paddingRight:"5px", fontSize:"small"}}/> Sign in with Google</button>
+          <button><GoogleIcon style={{paddingRight:"5px", fontSize:"small"}}/><Link to="/" style={{textDecoration:"none", color:"rgb(1,110,141)"}}> Sign in with Google</Link> </button>
+          <p>Create your account? <span><Link to='/register' style={{textDecoration:"none",color:"rgb(1,110,141)"}}>Create</Link></span></p>
         </div>
       </div>
     </div>

@@ -1,16 +1,20 @@
+@import "../../app.scss";
+
 .login{
+    
     height: 100vh;
     background: #ffffff;
-    // background: linear-gradient(rgba(24, 149, 245, 0.173),rgba(63, 102, 200, 0.515));
     display: flex;
     align-items: center;
     justify-content: center;
         .card{
             width: 50%;
             display: flex;
-            //background-color: rgba(79, 167, 235, 0.179);
             border-radius: 10px;
             min-height: 600px;
+            @media (max-width: 768px) {
+                width: 70%
+            }
             .left{
                 flex: 1;
                 background: url("https://images.pexels.com/photos/1019771/pexels-photo-1019771.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"), 
@@ -22,6 +26,9 @@
                 align-items: center;
                 justify-content: end;
                 gap: 20px;
+                @media (max-width: 768px) {
+                      display: none; 
+                }
                 span{
                     color: white;
                 }
@@ -92,6 +99,13 @@
                     color: rgb(1,110,141);
                     font-size: 12px;
                 }
+                p{
+                    font-size: 10px;
+                    span{
+                        color: rgb(1,110,141);
+                    }
+                }
             }
-        }
+        }   
+    
 }

@@ -1,6 +1,5 @@
 import "./leftBar.scss"
-import { useContext, useState } from "react"
-import { AuthContext } from "../../context/AuthContext"
+import { useState } from "react"
 import Create from "../create/Create"
 import Notification from "../notifications/Notification"
 import Followers from "../../components/followers/followers"
@@ -35,13 +34,12 @@ function LeftBar() {
     function togglePop () {
         setSeen(!seen);
     }
-  const {currentUser} = useContext(AuthContext)
   return (
     <div className="leftBar">
       <div className="container">
         <div className="menu">
           <div className="user">
-            <img src={currentUser.profilePic} alt="" />
+            <img src="https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="" />
             <Link to="/profile/2" style={{textDecoration:"none"}}>
               <span>Profile</span>
             </Link>
@@ -92,7 +90,9 @@ function LeftBar() {
           </div>
           <div className="item">
             <LogoutOutlinedIcon/>
-            <span>Logout</span>
+            <Link to="/login" style={{textDecoration: "none"}}>
+              <span>Logout</span>
+            </Link>
           </div>
         </div>
         <div className="menubar">

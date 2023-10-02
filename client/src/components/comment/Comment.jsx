@@ -1,9 +1,7 @@
-import { useContext } from "react"
-import {AuthContext} from '../../context/AuthContext'
 import "./comment.scss"
+import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
 
 function Comment() {
-    const {currentUser} = useContext(AuthContext)
     const comments = [
         {
             id:1,
@@ -23,9 +21,9 @@ function Comment() {
   return (
     <div className="comments">
         <div className="text">
-            <img src={currentUser.profilePic} alt="" />
+            <img src="https://images.pexels.com/photos/3228727/pexels-photo-3228727.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="" />
             <input type="text" placeholder="Write Something.."/>
-            <button>Send</button>
+            <button><SendOutlinedIcon style={{width:"16px"}}/> </button>
         </div>
       {comments.map((comment)=>(
         <div className="comment" key={comment.id}>

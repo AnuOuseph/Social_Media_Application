@@ -6,20 +6,16 @@ function Signup() {
     <div className="signup">
       <div className="card">
         <div className="left">
-          <span>Not a user?</span>
-          <Link to="/login">
-            <button>Sign In</button>
-          </Link>
         </div>
         <div className="right">
           <h1>Ixia</h1>
           <p>Create a new account.</p>
           <form>
             <input type="text" placeholder="Username" />
-            <input type="text" placeholder="Name" />
             <input type="email" placeholder="Email" />
             <input type="password" placeholder="Password" />
-            <Link to='/login' style={{textDecoration:"none",color:"white"}}>Create</Link>
+            <button><Link to="/" style={{textDecoration:"none",color:"white"}}>Create</Link> </button>
+            <p>Login to your account? <span><Link to='/login' style={{textDecoration:"none",color:"rgb(1,110,141)"}}>Login</Link></span></p>
           </form>
         </div>
       </div>

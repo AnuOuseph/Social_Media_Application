@@ -11,8 +11,8 @@
     border-radius: 10px;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
     @media(max-width:480px){
-        height: auto;
-        width: 300px;
+        height: 500px;
+        max-width: 300px;
     }
     @media(max-width:960px){
         height: auto;
@@ -26,20 +26,15 @@
             display: flex;
             overflow: hidden;
             height: 500px;
-            @media(max-width:480px){
-                display: flex;
-                flex-direction: column;
-            }
             .leftView{
                 flex: 1;
+                @media(max-width:480px){
+                    display: none;
+                }
                 img{
                     width: 400px;
                     height: 500px;
-                    object-fit: cover;
-                    @media(max-width:480px){
-                        width: 200px;
-                        height: 200px;
-                    }
+                    object-fit: cover; 
                     @media(max-width:960px){
                         height: 400px;
                         width: 300px;
