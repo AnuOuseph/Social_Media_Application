@@ -1,4 +1,4 @@
-# CRM Application
+# Social Media Application
 
 Ixia is a Social Media Application design using Reactjs and SCSS. Providing an interactive user interface with responsive design and dark mode functionality.
 
